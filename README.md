@@ -1,2 +1,3 @@
 # Kodovani-Ve-Dvojici
-# C3c Ondřej Kučera a Tomáš Kutil
+## C3c Ondřej Kučera a Tomáš Kutil
+
