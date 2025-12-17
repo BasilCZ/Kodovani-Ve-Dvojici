@@ -34,7 +34,7 @@ body {
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 60px;
     font-size: 14px;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -57,12 +57,13 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    padding: 60px;
+    padding-right: 500px;
+    padding-bottom: 200px;
     color: white;
 }
 
 .hero h1 { 
-    font-size: 5rem; 
+    font-size: 120px; 
     text-align: right; 
     line-height: 1; 
     font-weight: bold;
@@ -108,21 +109,23 @@ body {
 
 .trips-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 200px 200px 200px;
+    grid-gap: 15px;
+    margin: 80px;
+    justify-content: center;
 }
-.grid-item img { width: 100%; height: 350px; object-fit: cover; display: block; }
+.grid-item img {
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+}
 
-.central-text { 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-   
-    background: #f2f2f2; 
-    text-align: center; 
-    font-size: 2.5rem; 
-    font-weight: bold;
-    color: #333333; 
+.central-text {
+    align-self: center;
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
 }
 
 .brown-section { 
@@ -191,8 +194,7 @@ body {
 
 
 footer { 
-   
-    background: #33292a;
+    background: #333333;
     text-align: center; 
     padding: 40px 20px; 
 }
@@ -212,7 +214,6 @@ footer a:hover {
 footer p { 
     color: white; 
     font-size: 12px; 
-    letter-spacing: 1px; 
 }
 
 
