@@ -1,92 +1,244 @@
 
-
-body {font-size: 15px;font-family: Roboto}
-
-.container {width:1440px;margin:0 auto;position:relative;border:1px solid red;} /* */
-section.container {min-height:963px} 
-.topnav {display:flex;min-height:30px;background:#33292a;justify-content:center}
-.topnav li {list-style-type: none;font-size:30px;border-right:1px solid blue;padding:0 5px}
-.topnav li a:hover {color: lightblue}
-.topnav li a {color:white;text-decoration:none}
-a.icon {display:none}
-
-.sec1 {background: url("img/scott-goodwill.jpg") 50% 50%;}
-.container-text {width:340px;text-align:right;bottom:11vh;right:10vw;position:absolute;}
-
-h1 {font-size:76px;color: white}
-
-
-.grid-container {
-            display: grid;
-            grid-template-columns: 300px 300px 300px; /* sloupce*/
-            grid-template-rows: 250px 250px 250px; /* radky */
-            grid-gap: 10px; /* mezera*/
-           
-        }
-        img { /*nastaveni obrazku*/
-            width :300px; 
-            height:250px;
-            border-radius:5px;
-        }
-        h2 { /*nastaveni textu*/
-            text-align: center;
-            align-self: center;
-            width: 300px;
-            height: 250px;
-            line-height: 250px;
-        
-            background-color: lightgray;
-        }
-
-@media screen and (width <= 768px) { /* w:390px */
-  .container {width:100%}
-  
-  .topnav {
-  /*display: none;*/
-    }
-
-    a.icon {display:block}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Roboto', 'Arial', sans-serif;
 }
-/*
-Použité barvy:
-Navigace:
-background-color: #33292a
-color: #fff
 
-Pozadí:
-#33292a
-#644b4f
-#333333
-#f2f2f2
+body { 
+    line-height: 1.6; 
+    color: #333; 
+    background-color: #f2f2f2; 
+}
 
-Odkaz: 
-#efa69d
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
 
-Odkaz hover: 
-#e9877b
 
-Zakulacení rohů:
-border-radius: 5px;
+.navbar {
+   
+    background: #33292a;
+    color: #fff; 
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-Použitá rodina písma:
-Roboto
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
 
-Breakpoint mobil vs tablet:
-768px
 
-Breakpoint tablet vs desktop:
-992px
+.nav-links a:hover {
+    color: #e9877b;
+}
 
-Odkaz na figmu
-https://www.figma.com/file/I3CPHrJyWzUj8rrU08zcIp/Engeto-Projekt-1?node-id=0%3A1&t=5bm9TcpqNQQAhNxK-1 https://www.figma.com/file/I3CPHrJyWzUj8rrU08zcIp/Engeto-Projekt-1?node-id=4%3A195&t=5bm9TcpqNQQAhNxK-1 https://www.figma.com/file/I3CPHrJyWzUj8rrU08zcIp/Engeto-Projekt-1?node-id=6%3A280&t=5bm9TcpqNQQAhNxK-1
+.hamburger { display: none; color: white; cursor: pointer; }
 
-*/
-@media screen and (width <= 992px) { /* w:390px */
-  .container {width:100%}
-  
-  .topnav {
-  /*display: none;*/
-    }
 
-    a.icon {display:block}
+.hero {
+    height: 95vh;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), 
+                url('scott-goodwill.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 60px;
+    color: white;
+}
+
+.hero h1 { 
+    font-size: 5rem; 
+    text-align: right; 
+    line-height: 1; 
+    font-weight: bold;
+}
+
+
+.about { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 50px; 
+    align-items: flex-start; 
+}
+.about h2 { font-size: 2.5rem; margin-bottom: 20px; }
+.about p { margin-bottom: 15px; font-size: 1.1rem; }
+
+
+.about img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+}
+
+
+.dark-section { 
+   
+    background: #33292a; 
+    color: white; 
+    text-align: center; 
+    padding: 80px 20px; 
+}
+.dark-section h2 { font-size: 2.5rem; margin-bottom: 20px; }
+.intro-text { max-width: 850px; margin: 0 auto 50px; font-size: 1.1rem; }
+
+.activities { 
+    display: flex; 
+    justify-content: space-around; 
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+.activity .icon { width: 60px; margin-bottom: 15px; }
+.activity h3 { font-size: 1.2rem; font-weight: normal; }
+
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+}
+.grid-item img { width: 100%; height: 350px; object-fit: cover; display: block; }
+
+.central-text { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+   
+    background: #f2f2f2; 
+    text-align: center; 
+    font-size: 2.5rem; 
+    font-weight: bold;
+    color: #333333; 
+}
+
+.brown-section { 
+   
+    background: #644b4f; 
+    color: white; 
+    padding: 100px 20px; 
+}
+.contact-split { 
+    display: grid; 
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 60px; 
+    align-items: center;
+}
+.contact-split h2 { font-size: 2.8rem; line-height: 1.2; }
+
+.btn { 
+    background: white; 
+    
+    color: #644b4f; 
+    border: none; 
+    padding: 15px 35px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #f2f2f2;
+}
+
+
+.reviews { 
+    text-align: center; 
+    padding: 100px 20px; 
+    background-color: #f2f2f2;
+}
+.reviews h2 { font-size: 2.5rem; margin-bottom: 15px; color: #333333; }
+.subtitle { max-width: 800px; margin: 0 auto 60px; font-size: 1.1rem; color: #555; }
+
+.testimonial-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 80px; 
+}
+.avatar-wrapper { 
+    width: 150px; 
+    height: 150px; 
+    margin: 0 auto 30px; 
+    border-radius: 50%; 
+    overflow: hidden;
+}
+.avatar-img { width: 100%; height: 100%; object-fit: cover; }
+.author { font-size: 1.2rem; font-weight: bold; color: #333333; }
+
+
+.bottom-gallery { display: flex; flex-wrap: wrap; }
+.gallery-row { display: flex; width: 100%; }
+.gallery-col { flex: 1; }
+.gallery-col img { width: 100%; height: 500px; object-fit: cover; display: block; }
+
+
+footer { 
+   
+    background: #33292a;
+    text-align: center; 
+    padding: 40px 20px; 
+}
+
+footer a { 
+    color: #efa69d; 
+    text-decoration: none; 
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover { 
+    color: #e9877b; 
+}
+footer p { 
+    color: white; 
+    font-size: 12px; 
+    letter-spacing: 1px; 
+}
+
+
+@media (max-width: 992px) {
+    .hero h1 { font-size: 3.5rem; }
+    .about, .contact-split { grid-template-columns: 1fr; text-align: center; }
+    .testimonial-grid { gap: 40px; }
+    .container { padding: 40px 20px; }
+}
+
+
+@media (max-width: 768px) {
+    .navbar { text-align: right; padding-right: 20px; }
+    .nav-links { display: none; }
+    .hamburger { display: inline-block; }
+    
+    .hero { justify-content: center; padding: 20px; }
+    .hero h1 { font-size: 3rem; text-align: center; }
+    
+    .activities { flex-direction: column; align-items: center; gap: 40px; }
+    
+    .trips-grid { grid-template-columns: 1fr; }
+    .central-text { order: -1; height: 150px; font-size: 2rem; }
+    
+    .testimonial-grid { grid-template-columns: 1fr; }
+    
+    .gallery-row { flex-direction: column; }
+    .gallery-col img { height: 300px; }
 }
