@@ -247,4 +247,13 @@ footer p {
     
     .gallery-row { flex-direction: column; }
     .gallery-col img { height: 300px; }
+    .grid-item img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .trips-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }
